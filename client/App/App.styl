@@ -31,6 +31,17 @@ a
 strong
   font-weight bold
 
+input[type=text]
+input[type=email]
+input[type=password]
+input[type=tel]
+input[type=number]
+  outline none
+  border 1px solid #ddd
+  padding 6px 8px
+  font-size 18px // TODO: This could stand to be refactored for responsive
+  margin-bottom 10px
+
 
 // }}} END Tags
 
@@ -44,3 +55,59 @@ strong
 
 .app
   background off-white
+
+.main-nav
+  margin 10px 0
+  padding 10px 0
+  border-top 1px solid #ddd
+  border-bottom 1px solid #ddd
+
+  a
+    display inline-block
+    margin-left 20px
+    color darken(gray, 40%)
+
+    &:first-child
+      margin-left 0
+
+    &.active
+      color red
+
+
+.ListReports
+
+  ul
+    padding 0
+
+  .row
+    display table
+    width 100%
+    padding-bottom 10px
+
+    p
+      display table-cell
+
+  .title-row
+    font-weight bold
+
+  .subject
+    width 60%
+  .created
+    width 40%
+
+
+btn(bg = #ddd, clr = black)
+  padding 4px 6px
+  background-color bg
+  border 1px solid darken(bg, 20%)
+  color clr
+  text-decoration none
+  outline none
+  appearance none
+  &:hover
+    text-decoration none
+    background-color darken(bg, 10%)
+
+.btn
+  btn()
+

@@ -1,6 +1,9 @@
 import React from 'react';
+import Router from 'react-router';
 
-import App from './App/App.js';
+import routes from './router.js';
 
-React.render(<App/>, document.getElementById('root'));
+Router.run(routes, (Handler) => {
+  React.render(<Handler />, document.getElementById('root'));
+});
 
