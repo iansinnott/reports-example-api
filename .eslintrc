@@ -28,6 +28,9 @@
     "react/jsx-quotes": [2, "single", "avoid-escape"],
 
     // Don't use spaces in JSX curl brackets
-    "react/jsx-curly-spacing": [2]
+    "react/jsx-curly-spacing": [2],
+
+    // Allow more than one component per file
+    "react/no-multi-comp": 0
   }
 }
