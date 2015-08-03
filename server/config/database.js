@@ -21,6 +21,7 @@ const Reports = Waterline.Collection.extend({
       type: 'integer',
     },
   },
+  migrate: 'safe',
 });
 
 export const config = {
