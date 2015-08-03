@@ -12,9 +12,8 @@ RUN mkdir -p /var/www/reports-api
 COPY . /var/www/reports-api
 WORKDIR /var/www/reports-api
 RUN npm install && ./node_modules/.bin/gulp build
-RUN node bin/www
-
 EXPOSE 80
 CMD ["node", "bin/www"]
+
 # docker build -t isinn/reports-api .
 # docker run -d -p 80:80 --name reports-api isinn/reports-api
