@@ -12,7 +12,6 @@ export default function apiWrapper(app) {
   const api = Router();
 
   api.get('/', (req, res) => {
-    console.log(app.models);
     res.send({ success: true, message: 'You made it!' });
   });
 
@@ -20,32 +19,32 @@ export default function apiWrapper(app) {
    * RESTful route example
    * **************************************************************************/
 
-  api.get('/things', (req, res, next) => {
-    app.models.thing.find()
+  api.get('/reports', (req, res, next) => {
+    app.models.report.find()
       .then(data => res.send(data))
       .catch(next);
   });
 
-  api.get('/things/:id', (req, res, next) => {
-    app.models.thing.findOne({ id: req.params.id })
+  api.get('/reports/:id', (req, res, next) => {
+    app.models.report.findOne({ id: req.params.id })
       .then(data => res.send(data))
       .catch(next);
   });
 
-  api.post('/things', (req, res, next) => {
-    app.models.thing.create(req.body)
+  api.post('/reports', (req, res, next) => {
+    app.models.report.create(req.body)
       .then(data => res.send(data))
       .catch(next);
   });
 
-  api.put('/things/:id', (req, res, next) => {
-    app.models.thing.update({ id: req.params.id }, req.body)
+  api.put('/reports/:id', (req, res, next) => {
+    app.models.report.update({ id: req.params.id }, req.body)
       .then(data => res.send(data))
       .catch(next);
   });
 
-  api.delete('/things/:id', (req, res, next) => {
-    app.models.thing.destroy({ id: req.params.id })
+  api.delete('/reports/:id', (req, res, next) => {
+    app.models.report.destroy({ id: req.params.id })
       .then(data => res.send(data))
       .catch(next);
   });
